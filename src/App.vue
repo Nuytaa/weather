@@ -79,7 +79,7 @@ export default {
     weatherSearch() {
       this.loading = true;
       this.error = false;
-      fetch(`http://api.weatherapi.com/v1/current.json?key=f7f6d5a76d804ca38c5222717240605&q=${this.searchQuery}`)
+      fetch(`https://api.weatherapi.com/v1/current.json?key=f7f6d5a76d804ca38c5222717240605&q=${this.searchQuery}`)
       .then(response => response.json())
       .then(data => {
         this.loading = false;
