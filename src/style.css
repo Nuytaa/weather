@@ -94,11 +94,11 @@ input, button {
   opacity: 1;
 }
 
-.weather.partly-cloudy .weather-bg_img:not(.partly-cloudy){ 
+.weather.loudy .weather-bg_img:not(.cloudy){ 
   opacity: 0;
 }
 
-.weather.partly-cloudy .weather-bg_img.partly-cloudy{ 
+.weather.cloudy .weather-bg_img.cloudy{ 
   opacity: 1;
 }
 
@@ -131,6 +131,14 @@ input, button {
 }
 
 .weather.snow .weather-bg_img.snow{ 
+  opacity: 1;
+}
+
+.weather.sleet .weather-bg_img:not(.sleet){ 
+  opacity: 0;
+}
+
+.weather.sleet .weather-bg_img.sleet{ 
   opacity: 1;
 }
 

@@ -26,12 +26,13 @@
       <div>
         <img class="weather-bg_img bg" src="./assets/background.jpg" alt="App Background">
         <img class="weather-bg_img overcast" src="./assets/overcast.jpg" alt="App Background">
-        <img class="weather-bg_img partly-cloudy" src="./assets/partly-cloudy.jpg" alt="App Background">
+        <img class="weather-bg_img cloudy" src="./assets/partly-cloudy.jpg" alt="App Background">
         <img class="weather-bg_img sunny" src="./assets/sunny.jpg" alt="App Background">
         <img class="weather-bg_img clear" src="./assets/clear.png" alt="App Background">
         <img class="weather-bg_img rain" src="./assets/rain.jpg" alt="App Background">
         <img class="weather-bg_img thunder" src="./assets/storm.jpg" alt="App Background">
         <img class="weather-bg_img snow" src="./assets/snow.jpg" alt="App Background">
+        <img class="weather-bg_img sleet" src="./assets/sleet.jpg" alt="App Background">
       </div>
     </div>
   </div>
@@ -55,20 +56,22 @@ export default {
 
   computed: {
     weatherClass() {
-      if (this.description.includes('Sunny')) {
+      if (/\bsunny\b/i.test(this.description)) {
         return 'sunny';
-      } else if (this.description.includes('Overcast')) {
+      } else if (/\bovercast\b/i.test(this.description)) {
         return 'overcast';
-      } else if (this.description.includes('Partly cloudy')) {
-        return 'partly-cloudy';
-      } else if (this.description.includes('Clear')) {
+      } else if (/\bcloudy\b/i.test(this.description)) {
+        return 'cloudy';
+      } else if (/\bclear\b/i.test(this.description)) {
         return 'clear';
-      } else if (this.description.includes('Light rain')) {
+      } else if (/\brain\b/i.test(this.description)) {
         return 'rain';
-      } else if (this.description.includes('thunder')) {
+      } else if (/\b(rain|thunder)\b/i.test(this.description)) {
         return 'thunder';
-      } else if (this.description.includes('Snow')) {
+      } else if (/\bsnow\b/i.test(this.description)) {
         return 'snow';
+      }else if (/\bsleet\b/i.test(this.description)) {
+        return 'sleet';
       }else {
         return '';
       }
