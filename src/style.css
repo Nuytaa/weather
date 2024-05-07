@@ -118,6 +118,22 @@ input, button {
   opacity: 1;
 }
 
+.weather.thunder .weather-bg_img:not(.thunder){ 
+  opacity: 0;
+}
+
+.weather.thunder .weather-bg_img.thunder{ 
+  opacity: 1;
+}
+
+.weather.snow .weather-bg_img:not(.snow){ 
+  opacity: 0;
+}
+
+.weather.snow .weather-bg_img.snow{ 
+  opacity: 1;
+}
+
 .container {
   width: 100%;
   max-width: 1000px;

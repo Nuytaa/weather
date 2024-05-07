@@ -30,6 +30,8 @@
         <img class="weather-bg_img sunny" src="./assets/sunny.jpg" alt="App Background">
         <img class="weather-bg_img clear" src="./assets/clear.png" alt="App Background">
         <img class="weather-bg_img rain" src="./assets/rain.jpg" alt="App Background">
+        <img class="weather-bg_img thunder" src="./assets/storm.jpg" alt="App Background">
+        <img class="weather-bg_img snow" src="./assets/snow.jpg" alt="App Background">
       </div>
     </div>
   </div>
@@ -63,6 +65,10 @@ export default {
         return 'clear';
       } else if (this.description.includes('Light rain')) {
         return 'rain';
+      } else if (this.description.includes('thunder')) {
+        return 'thunder';
+      } else if (this.description.includes('Snow')) {
+        return 'snow';
       }else {
         return '';
       }
